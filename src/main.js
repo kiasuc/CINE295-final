@@ -9,14 +9,29 @@ import { initPanel, showNode, showEdge, hidePanel } from "./panel.js";
 import data from "../data/graph.json";
 
 const container = document.getElementById("canvas-root");
-const { scene, camera, renderer, controls, composer, labelRenderer } =
+const { scene, camera, renderer, controls, composer, bloomPass, labelRenderer } =
   createScene(container);
+
+const BLOOM_STRENGTH = bloomPass.strength;
+const BLOOM_MOVING = BLOOM_STRENGTH * 0.35;
+let bloomTarget = BLOOM_STRENGTH;
+let bloomSettleTimer = null;
+controls.addEventListener("start", () => {
+  bloomTarget = BLOOM_MOVING;
+  clearTimeout(bloomSettleTimer);
+});
+controls.addEventListener("end", () => {
+  clearTimeout(bloomSettleTimer);
+  bloomSettleTimer = setTimeout(() => {
+    bloomTarget = BLOOM_STRENGTH;
+  }, 120);
+});
 
 const stage = createStage(scene);
 const graphAPI = buildGraph(data, scene);
 const { nodeMeshes, edgeMeshes, nodesById } = graphAPI;
 
-const particles = createParticleField(scene, { count: 500, radius: 45 });
+const particles = createParticleField(scene, { count: 250, radius: 45 });
 
 initPanel({ onJumpToNode: jumpToNode });
 
@@ -39,7 +54,11 @@ dom.addEventListener("pointerup", (e) => {
   handleClick(e);
 });
 
+let lastPickTime = 0;
 dom.addEventListener("pointermove", (e) => {
+  const now = performance.now();
+  if (now - lastPickTime < 32) return;
+  lastPickTime = now;
   const nodeHit = pick(e, dom, camera, nodeMeshes);
   hoveredId = nodeHit ? nodeHit.object.userData.node.id : null;
   const hit = nodeHit || pick(e, dom, camera, edgeMeshes);
@@ -112,6 +131,7 @@ renderer.setAnimationLoop(() => {
   graphAPI.tick(elapsed);
   particles.tick(elapsed);
 
+  bloomPass.strength += (bloomTarget - bloomPass.strength) * 0.14;
   composer.render();
   labelRenderer.render(scene, camera);
 });
