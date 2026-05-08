@@ -1,176 +1,371 @@
 {
   "nodes": [
     {
-      "id": "intro",
-      "title": "Mainstage",
+      "id": "lead-artist",
+      "title": "Artist",
       "position": [0, 2, 0],
-      "radius": 1.4,
+      "radius": 1.45,
       "color": "#00f0ff",
-      "body": "Welcome to the mainstage. Each sphere is a topic; lines between them are relationships. Click a sphere to focus on it, or click a line to see how two topics connect."
+      "body": "The central creative figure whose recordings, live performances, brand, and career decisions connect the rest of the music-industry team."
     },
     {
-      "id": "topic-a",
-      "title": "Topic A",
-      "position": [10, 5, 6],
-      "radius": 0.9,
+      "id": "artist-manager",
+      "title": "Artist Manager",
+      "position": [7, 8, 5],
+      "radius": 1.05,
       "color": "#ff2d95",
-      "body": "Hot pink branch. Replace this body with your own content in data/graph.json."
+      "body": "The central strategist who coordinates business deals, career strategy, and the artist's professional team."
     },
     {
-      "id": "topic-b",
-      "title": "Topic B",
-      "position": [-9, 6, -7],
-      "radius": 0.9,
+      "id": "songwriter-composer",
+      "title": "Songwriter & Composer",
+      "position": [-8, 8, 6],
+      "radius": 0.95,
       "color": "#b026ff",
-      "body": "Ultraviolet thread. A different perspective from the mainstage; connected to Topic D."
+      "body": "The creators of the underlying musical composition, including melodies, lyrics, and harmonic structures."
     },
     {
-      "id": "topic-c",
-      "title": "Topic C",
-      "position": [12, -2, -5],
-      "radius": 0.85,
-      "color": "#9bc94a",
-      "body": "Acid-lime sub-stage. Connected to Topic A and Topic D."
-    },
-    {
-      "id": "topic-d",
-      "title": "Topic D",
-      "position": [-12, -3, 5],
-      "radius": 0.85,
-      "color": "#ff7a00",
-      "body": "Sunset-orange anchor. Ties the lower half of the graph together."
-    },
-    {
-      "id": "topic-e",
-      "title": "Topic E",
-      "position": [4, -4, 8],
-      "radius": 0.8,
-      "color": "#ffb24e",
-      "body": "Gold front-stage topic. Connected to the mainstage and Topic C."
-    },
-    {
-      "id": "topic-f",
-      "title": "Topic F",
-      "position": [-5, 3, -10],
-      "radius": 0.8,
-      "color": "#ff7ab8",
-      "body": "Pink front-stage topic. Connected to the mainstage and Topic D."
-    },
-    {
-      "id": "topic-g",
-      "title": "Topic G",
-      "position": [7, 8, -2],
-      "radius": 0.8,
+      "id": "music-producer",
+      "title": "Music Producer",
+      "position": [-12, 3, -4],
+      "radius": 0.98,
       "color": "#4ed8ff",
-      "body": "Sky-blue top-right topic. Connected to the mainstage and Topic A."
+      "body": "The creative director of the recording process who oversees arrangement, performance, and sound design."
     },
     {
-      "id": "topic-h",
-      "title": "Topic H",
-      "position": [-7, -1, 9],
-      "radius": 0.8,
+      "id": "audio-engineer",
+      "title": "Audio Engineer",
+      "position": [-14, 1, 5],
+      "radius": 0.88,
       "color": "#6cffd0",
-      "body": "Mint top-left topic. Connected to the mainstage and Topic B."
+      "body": "Technical specialists in recording, mixing, and mastering who capture and polish sound into a commercial master."
+    },
+    {
+      "id": "entertainment-attorney",
+      "title": "Entertainment Attorney",
+      "position": [12, 3, -6],
+      "radius": 0.92,
+      "color": "#ff7a00",
+      "body": "Legal counsel specialized in negotiating contracts for labels, publishing, and touring while protecting intellectual property rights."
+    },
+    {
+      "id": "business-manager",
+      "title": "Business Manager",
+      "position": [13, 1, 5],
+      "radius": 0.9,
+      "color": "#ffb24e",
+      "body": "A specialized accountant managing the artist's finances, including taxes, budgets, and long-term financial planning."
+    },
+    {
+      "id": "music-publisher",
+      "title": "Music Publisher",
+      "position": [-5, -3, 10],
+      "radius": 0.9,
+      "color": "#9bc94a",
+      "body": "Entities that manage, license, and monetize musical compositions, seek sync opportunities, and collect royalties."
+    },
+    {
+      "id": "a-r-executive",
+      "title": "A&R Executive",
+      "position": [4, 12, -9],
+      "radius": 0.9,
+      "color": "#ff7ab8",
+      "body": "Label representatives responsible for talent scouting and guiding the creative development of signed artists."
+    },
+    {
+      "id": "marketing-pr-representative",
+      "title": "Marketing & PR Representative",
+      "position": [12, 8, 9],
+      "radius": 0.92,
+      "color": "#c6ff00",
+      "body": "Professionals managing the artist's public image, media relationships, and overall release campaigns."
+    },
+    {
+      "id": "booking-agent",
+      "title": "Booking Agent",
+      "position": [-4, -1, -13],
+      "radius": 0.9,
+      "color": "#ff4d6d",
+      "body": "The representative who secures live performance offers, negotiates fees, and routes tours."
+    },
+    {
+      "id": "concert-promoter",
+      "title": "Concert Promoter",
+      "position": [5, -4, -12],
+      "radius": 0.88,
+      "color": "#ff9f1c",
+      "body": "The individual or company that takes the financial risk to produce a live event by renting the venue and marketing the show."
+    },
+    {
+      "id": "tour-production-manager",
+      "title": "Tour & Production Manager",
+      "position": [-10, -3, -9],
+      "radius": 0.92,
+      "color": "#00bbf9",
+      "body": "Logistical leaders who oversee road operations, travel, budgeting, and the technical execution of tours."
+    },
+    {
+      "id": "live-technical-crew",
+      "title": "Live Technical Crew",
+      "position": [-15, 2, -10],
+      "radius": 0.86,
+      "color": "#80ffdb",
+      "body": "Technical experts including FOH engineers, monitor engineers, and backline techs who maintain equipment and run the show nightly."
+    },
+    {
+      "id": "digital-distributor-platform-gatekeeper",
+      "title": "Digital Distributor & Platform Gatekeeper",
+      "position": [5, -3, 12],
+      "radius": 0.88,
+      "color": "#fee440",
+      "body": "Intermediaries that deliver music to streaming platforms, plus DSP curators who influence discovery and placement."
     }
   ],
   "edges": [
     {
-      "id": "intro-a",
-      "source": "intro",
-      "target": "topic-a",
-      "label": "leads to",
-      "body": "The mainstage feeds energy directly into Topic A."
+      "id": "lead-artist-artist-manager",
+      "source": "lead-artist",
+      "target": "artist-manager",
+      "label": "career strategy",
+      "body": "The artist and manager coordinate the professional team, long-term strategy, and business priorities around the artist's career."
     },
     {
-      "id": "intro-b",
-      "source": "intro",
-      "target": "topic-b",
-      "label": "contrasts with",
-      "body": "Topic B offers a contrasting perspective to the mainstage."
+      "id": "lead-artist-music-producer",
+      "source": "lead-artist",
+      "target": "music-producer",
+      "label": "studio collaboration",
+      "body": "Studio collaboration to record masters and realize the project's sonic vision."
     },
     {
-      "id": "intro-e",
-      "source": "intro",
-      "target": "topic-e",
-      "label": "spawns",
-      "body": "Topic E is a front-stage offshoot of the mainstage."
+      "id": "lead-artist-songwriter-composer",
+      "source": "lead-artist",
+      "target": "songwriter-composer",
+      "label": "creative co-authorship",
+      "body": "Creative co-authorship of lyrics and melodic compositions."
     },
     {
-      "id": "intro-f",
-      "source": "intro",
-      "target": "topic-f",
-      "label": "spawns",
-      "body": "Topic F is a front-stage offshoot of the mainstage."
+      "id": "lead-artist-a-r-executive",
+      "source": "lead-artist",
+      "target": "a-r-executive",
+      "label": "creative development",
+      "body": "Creative development and internal advocacy for the artist within a record label."
     },
     {
-      "id": "intro-g",
-      "source": "intro",
-      "target": "topic-g",
-      "label": "elevates",
-      "body": "Topic G sits above the mainstage, extending its themes upward."
+      "id": "lead-artist-booking-agent",
+      "source": "lead-artist",
+      "target": "booking-agent",
+      "label": "live booking",
+      "body": "Securing and planning live appearances and tour routes."
     },
     {
-      "id": "intro-h",
-      "source": "intro",
-      "target": "topic-h",
-      "label": "elevates",
-      "body": "Topic H sits above the mainstage on the opposite side."
+      "id": "lead-artist-entertainment-attorney",
+      "source": "lead-artist",
+      "target": "entertainment-attorney",
+      "label": "legal protection",
+      "body": "Legal protection through negotiation of label and performance contracts."
     },
     {
-      "id": "a-c",
-      "source": "topic-a",
-      "target": "topic-c",
-      "label": "depends on",
-      "body": "Topic A depends on ideas first developed in Topic C."
+      "id": "lead-artist-business-manager",
+      "source": "lead-artist",
+      "target": "business-manager",
+      "label": "financial oversight",
+      "body": "Financial oversight, including bill payment and tax planning."
     },
     {
-      "id": "b-d",
-      "source": "topic-b",
-      "target": "topic-d",
-      "label": "extends",
-      "body": "Topic B extends the framework introduced in Topic D."
+      "id": "lead-artist-marketing-pr-representative",
+      "source": "lead-artist",
+      "target": "marketing-pr-representative",
+      "label": "public image",
+      "body": "Development of public image and media strategy for consumer outreach."
     },
     {
-      "id": "a-g",
-      "source": "topic-a",
-      "target": "topic-g",
-      "label": "branches into",
-      "body": "Topic A branches upward into Topic G."
+      "id": "lead-artist-tour-production-manager",
+      "source": "lead-artist",
+      "target": "tour-production-manager",
+      "label": "road logistics",
+      "body": "Daily road logistics, travel coordination, and show scheduling."
     },
     {
-      "id": "b-h",
-      "source": "topic-b",
-      "target": "topic-h",
-      "label": "branches into",
-      "body": "Topic B branches upward into Topic H."
+      "id": "lead-artist-live-technical-crew",
+      "source": "lead-artist",
+      "target": "live-technical-crew",
+      "label": "stage support",
+      "body": "Direct support for sound, lighting, and instrument readiness on stage."
     },
     {
-      "id": "e-c",
-      "source": "topic-e",
-      "target": "topic-c",
-      "label": "feeds",
-      "body": "Topic E feeds back into Topic C."
+      "id": "artist-manager-a-r-executive",
+      "source": "artist-manager",
+      "target": "a-r-executive",
+      "label": "label alignment",
+      "body": "Strategic alignment of the artist's output with label release schedules."
     },
     {
-      "id": "f-d",
-      "source": "topic-f",
-      "target": "topic-d",
-      "label": "feeds",
-      "body": "Topic F feeds back into Topic D."
+      "id": "artist-manager-marketing-pr-representative",
+      "source": "artist-manager",
+      "target": "marketing-pr-representative",
+      "label": "release rollout",
+      "body": "Execution of marketing rollouts and social media engagement plans."
     },
     {
-      "id": "g-h",
-      "source": "topic-g",
-      "target": "topic-h",
-      "label": "bridges",
-      "body": "Topic G and Topic H bridge the upper layer of the graph."
+      "id": "artist-manager-booking-agent",
+      "source": "artist-manager",
+      "target": "booking-agent",
+      "label": "tour timing",
+      "body": "Collaboration on tour timing and selection of key live markets."
     },
     {
-      "id": "e-f",
-      "source": "topic-e",
-      "target": "topic-f",
-      "label": "bridges",
-      "body": "Topic E and Topic F bridge the front of the stage."
+      "id": "artist-manager-entertainment-attorney",
+      "source": "artist-manager",
+      "target": "entertainment-attorney",
+      "label": "deal review",
+      "body": "Vetting of new business offers for legal risks and contract finalization."
+    },
+    {
+      "id": "artist-manager-business-manager",
+      "source": "artist-manager",
+      "target": "business-manager",
+      "label": "sustainable growth",
+      "body": "Coordination to ensure career growth is financially sustainable."
+    },
+    {
+      "id": "artist-manager-music-publisher",
+      "source": "artist-manager",
+      "target": "music-publisher",
+      "label": "royalties and sync",
+      "body": "Tracking royalty collections and identifying synchronization opportunities."
+    },
+    {
+      "id": "artist-manager-tour-production-manager",
+      "source": "artist-manager",
+      "target": "tour-production-manager",
+      "label": "tour supervision",
+      "body": "High-level supervision of tour staffing and operational budgets."
+    },
+    {
+      "id": "a-r-executive-music-producer",
+      "source": "a-r-executive",
+      "target": "music-producer",
+      "label": "producer matching",
+      "body": "Scouting and matching specific producers to the artist's project."
+    },
+    {
+      "id": "a-r-executive-entertainment-attorney",
+      "source": "a-r-executive",
+      "target": "entertainment-attorney",
+      "label": "deal structure",
+      "body": "Legal structuring of signing deals and sample clearance agreements."
+    },
+    {
+      "id": "music-producer-audio-engineer",
+      "source": "music-producer",
+      "target": "audio-engineer",
+      "label": "recording and mix",
+      "body": "Directing the technical recording and mixing process for sonic quality."
+    },
+    {
+      "id": "music-producer-songwriter-composer",
+      "source": "music-producer",
+      "target": "songwriter-composer",
+      "label": "arrangement refinement",
+      "body": "Refinement of song arrangements and structures during production."
+    },
+    {
+      "id": "music-publisher-songwriter-composer",
+      "source": "music-publisher",
+      "target": "songwriter-composer",
+      "label": "song administration",
+      "body": "Administrative management of song copyrights and royalty payouts."
+    },
+    {
+      "id": "music-publisher-digital-distributor-platform-gatekeeper",
+      "source": "music-publisher",
+      "target": "digital-distributor-platform-gatekeeper",
+      "label": "metadata and placement",
+      "body": "Ensuring song data reaches supervisors and playlist curators for placements."
+    },
+    {
+      "id": "music-publisher-marketing-pr-representative",
+      "source": "music-publisher",
+      "target": "marketing-pr-representative",
+      "label": "sync publicity",
+      "body": "Integrating high-profile song placements into PR campaigns."
+    },
+    {
+      "id": "booking-agent-concert-promoter",
+      "source": "booking-agent",
+      "target": "concert-promoter",
+      "label": "appearance deals",
+      "body": "Negotiation of artist appearance fees and event deal terms."
+    },
+    {
+      "id": "booking-agent-tour-production-manager",
+      "source": "booking-agent",
+      "target": "tour-production-manager",
+      "label": "riders and schedules",
+      "body": "Exchange of technical riders and logistical tour schedules."
+    },
+    {
+      "id": "concert-promoter-tour-production-manager",
+      "source": "concert-promoter",
+      "target": "tour-production-manager",
+      "label": "show settlement",
+      "body": "Financial settlement and reconciliation of show revenue at the venue."
+    },
+    {
+      "id": "concert-promoter-marketing-pr-representative",
+      "source": "concert-promoter",
+      "target": "marketing-pr-representative",
+      "label": "ticket campaign",
+      "body": "Promotion of local events and coordination of ticket sales campaigns."
+    },
+    {
+      "id": "concert-promoter-live-technical-crew",
+      "source": "concert-promoter",
+      "target": "live-technical-crew",
+      "label": "venue staffing",
+      "body": "Linking touring needs with local venue security and stagehands."
+    },
+    {
+      "id": "marketing-pr-representative-digital-distributor-platform-gatekeeper",
+      "source": "marketing-pr-representative",
+      "target": "digital-distributor-platform-gatekeeper",
+      "label": "playlist traction",
+      "body": "Pitching to editors and influencers for playlist and social traction."
+    },
+    {
+      "id": "digital-distributor-platform-gatekeeper-audio-engineer",
+      "source": "digital-distributor-platform-gatekeeper",
+      "target": "audio-engineer",
+      "label": "technical standards",
+      "body": "Verification that master recordings meet platform technical standards."
+    },
+    {
+      "id": "business-manager-a-r-executive",
+      "source": "business-manager",
+      "target": "a-r-executive",
+      "label": "royalty audit",
+      "body": "Audit of label royalty statements and tracking of recoupable advances."
+    },
+    {
+      "id": "business-manager-entertainment-attorney",
+      "source": "business-manager",
+      "target": "entertainment-attorney",
+      "label": "contract economics",
+      "body": "Financial assessment of contract clauses and long-term royalty impacts."
+    },
+    {
+      "id": "business-manager-tour-production-manager",
+      "source": "business-manager",
+      "target": "tour-production-manager",
+      "label": "road budget",
+      "body": "Management of road budgets, crew payroll, and tour-related taxes."
+    },
+    {
+      "id": "tour-production-manager-live-technical-crew",
+      "source": "tour-production-manager",
+      "target": "live-technical-crew",
+      "label": "daily show operation",
+      "body": "Daily direction of equipment setup, safety, and live operation."
     }
   ]
 }

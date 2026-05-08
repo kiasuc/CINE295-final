@@ -4,7 +4,7 @@ import { createStage } from "./stage.js";
 import { buildGraph } from "./graph.js";
 import { createParticleField } from "./particles.js";
 import { pick } from "./picking.js";
-import { focusOn, tickCameraTween } from "./camera.js";
+import { focusOn, resetCamera, tickCameraTween } from "./camera.js";
 import { initPanel, showNode, showEdge, hidePanel } from "./panel.js";
 import data from "../data/graph.json";
 
@@ -28,12 +28,12 @@ controls.addEventListener("end", () => {
 });
 
 const stage = createStage(scene);
-const graphAPI = buildGraph(data, scene);
+const graphAPI = buildGraph(data, scene, camera);
 const { nodeMeshes, edgeMeshes, nodesById } = graphAPI;
 
 const particles = createParticleField(scene, { count: 250, radius: 45 });
 
-initPanel({ onJumpToNode: jumpToNode });
+initPanel({ onJumpToNode: jumpToNode, onClose: resetView });
 
 const dom = renderer.domElement;
 let pointerDown = null;
@@ -84,6 +84,7 @@ function handleClick(e) {
   }
   selectedId = null;
   hidePanel();
+  resetView();
 }
 
 function focusNode(node) {
@@ -114,6 +115,11 @@ function jumpToNode(id) {
   selectedId = id;
   focusNode(entry.node);
   showNode(entry.node);
+}
+
+function resetView() {
+  selectedId = null;
+  resetCamera({ camera, controls });
 }
 
 const clock = new THREE.Clock();

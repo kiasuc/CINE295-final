@@ -1,6 +1,6 @@
 const el = {};
 
-export function initPanel({ onJumpToNode }) {
+export function initPanel({ onJumpToNode, onClose }) {
   el.panel = document.getElementById("info-panel");
   el.kind = document.getElementById("panel-kind");
   el.title = document.getElementById("panel-title");
@@ -9,8 +9,12 @@ export function initPanel({ onJumpToNode }) {
   el.links = document.getElementById("panel-links");
   el.close = document.getElementById("panel-close");
 
-  el.close.addEventListener("click", hidePanel);
+  el.close.addEventListener("click", () => {
+    hidePanel();
+    el.onClose?.();
+  });
   el.onJumpToNode = onJumpToNode;
+  el.onClose = onClose;
 }
 
 export function showNode(node) {

@@ -23,13 +23,14 @@ const WIRE_GEOM = new THREE.IcosahedronGeometry(1.08, 2);
 const CYLINDER_GEOM = new THREE.CylinderGeometry(1, 1, 1, 24, 1, true);
 const UP = new THREE.Vector3(0, 1, 0);
 const SCALE_TMP = new THREE.Vector3();
+const EDGE_RADIUS = 0.18;
 
 const NOTE_SYMBOLS = ["♪", "♫", "♬", "♩"];
 
 const BPM = 44;
 const BEAT_HZ = BPM / 60;
 
-export function buildGraph(data, scene) {
+export function buildGraph(data, scene, camera) {
   const nodesById = new Map();
   const nodeMeshes = [];
   const edgeMeshes = [];
@@ -115,6 +116,14 @@ export function buildGraph(data, scene) {
       const targetEmissive = isSelected ? 1.5 + beat * 0.10 : isHovered ? 0.95 : 0.72 + beat * 0.08;
       currentEmissive += (targetEmissive - currentEmissive) * 0.10;
       core.material.emissiveIntensity = currentEmissive;
+
+      if (camera) {
+        const distance = camera.position.distanceTo(core.position);
+        const labelScale = THREE.MathUtils.clamp(1.25 - distance / 42, 0.58, 1);
+        const labelOpacity = THREE.MathUtils.clamp(1.15 - distance / 48, 0.42, 1);
+        labelEl.style.fontSize = `${11.5 * labelScale}px`;
+        labelEl.style.opacity = labelOpacity;
+      }
     });
   }
 
@@ -137,12 +146,12 @@ export function buildGraph(data, scene) {
       new THREE.MeshBasicMaterial({
         color: edgeColor,
         transparent: true,
-        opacity: 0.14,
+        opacity: 0.22,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
       }),
     );
-    orientCylinder(tube, a.mesh.position, b.mesh.position, 0.035);
+    orientCylinder(tube, a.mesh.position, b.mesh.position, EDGE_RADIUS);
     tube.userData = {
       kind: "edge",
       edge,
@@ -175,10 +184,10 @@ export function buildGraph(data, scene) {
         sizeAttenuation: true,
       });
       const sprite = new THREE.Sprite(mat);
-      sprite.scale.setScalar(0.55);
+      sprite.scale.setScalar(0.72);
       scene.add(sprite);
       const lateralSign = k % 2 === 0 ? 1 : -1;
-      const lateralAmt = 0.18 * Math.ceil(k / 2) * lateralSign;
+      const lateralAmt = 0.28 * Math.ceil(k / 2) * lateralSign;
       notes.push({ sprite, mat, baseT: k / NOTE_COUNT, bobPhase: k * 1.3, lateralAmt });
     }
 

@@ -25,6 +25,19 @@ export function focusOn({ target, distance, camera, controls, duration = 700 }) 
   };
 }
 
+export function resetCamera({ camera, controls, duration = 700 }) {
+  active = {
+    start: performance.now(),
+    duration,
+    fromTarget: controls.target.clone(),
+    fromPos: camera.position.clone(),
+    toTarget: new THREE.Vector3(0, 1.5, 0),
+    toPos: new THREE.Vector3(0, 3, 30),
+    camera,
+    controls,
+  };
+}
+
 export function tickCameraTween(now = performance.now()) {
   if (!active) return false;
   const t = Math.min(1, (now - active.start) / active.duration);
