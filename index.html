@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spheres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="canvas-root"></div>
+      <div id="vignette" aria-hidden="true"></div>
+
+      <header id="brand" aria-hidden="true">
+        <span class="brand-mark"></span>
+        <span class="brand-text">SPHERES</span>
+      </header>
+
+      <aside id="info-panel" class="hidden" aria-hidden="true">
+        <div class="panel-accent" aria-hidden="true"></div>
+        <button id="panel-close" aria-label="Close">&times;</button>
+        <div id="panel-kind"></div>
+        <h1 id="panel-title"></h1>
+        <div id="panel-meta"></div>
+        <div id="panel-body"></div>
+        <div id="panel-links"></div>
+      </aside>
+
+      <div id="hint">
+        DRAG TO ORBIT &nbsp;·&nbsp; SCROLL TO ZOOM &nbsp;·&nbsp; CLICK A SPHERE OR LINK
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

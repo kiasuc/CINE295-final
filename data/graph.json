@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "intro",
+      "title": "Mainstage",
+      "position": [0, 2, 0],
+      "radius": 1.4,
+      "color": "#00f0ff",
+      "body": "Welcome to the mainstage. Each sphere is a topic; lines between them are relationships. Click a sphere to focus on it, or click a line to see how two topics connect."
+    },
+    {
+      "id": "topic-a",
+      "title": "Topic A",
+      "position": [10, 5, 6],
+      "radius": 0.9,
+      "color": "#ff2d95",
+      "body": "Hot pink branch. Replace this body with your own content in data/graph.json."
+    },
+    {
+      "id": "topic-b",
+      "title": "Topic B",
+      "position": [-9, 6, -7],
+      "radius": 0.9,
+      "color": "#b026ff",
+      "body": "Ultraviolet thread. A different perspective from the mainstage; connected to Topic D."
+    },
+    {
+      "id": "topic-c",
+      "title": "Topic C",
+      "position": [12, -2, -5],
+      "radius": 0.85,
+      "color": "#9bc94a",
+      "body": "Acid-lime sub-stage. Connected to Topic A and Topic D."
+    },
+    {
+      "id": "topic-d",
+      "title": "Topic D",
+      "position": [-12, -3, 5],
+      "radius": 0.85,
+      "color": "#ff7a00",
+      "body": "Sunset-orange anchor. Ties the lower half of the graph together."
+    },
+    {
+      "id": "topic-e",
+      "title": "Topic E",
+      "position": [4, -4, 8],
+      "radius": 0.8,
+      "color": "#ffb24e",
+      "body": "Gold front-stage topic. Connected to the mainstage and Topic C."
+    },
+    {
+      "id": "topic-f",
+      "title": "Topic F",
+      "position": [-5, 3, -10],
+      "radius": 0.8,
+      "color": "#ff7ab8",
+      "body": "Pink front-stage topic. Connected to the mainstage and Topic D."
+    },
+    {
+      "id": "topic-g",
+      "title": "Topic G",
+      "position": [7, 8, -2],
+      "radius": 0.8,
+      "color": "#4ed8ff",
+      "body": "Sky-blue top-right topic. Connected to the mainstage and Topic A."
+    },
+    {
+      "id": "topic-h",
+      "title": "Topic H",
+      "position": [-7, -1, 9],
+      "radius": 0.8,
+      "color": "#6cffd0",
+      "body": "Mint top-left topic. Connected to the mainstage and Topic B."
+    }
+  ],
+  "edges": [
+    {
+      "id": "intro-a",
+      "source": "intro",
+      "target": "topic-a",
+      "label": "leads to",
+      "body": "The mainstage feeds energy directly into Topic A."
+    },
+    {
+      "id": "intro-b",
+      "source": "intro",
+      "target": "topic-b",
+      "label": "contrasts with",
+      "body": "Topic B offers a contrasting perspective to the mainstage."
+    },
+    {
+      "id": "intro-e",
+      "source": "intro",
+      "target": "topic-e",
+      "label": "spawns",
+      "body": "Topic E is a front-stage offshoot of the mainstage."
+    },
+    {
+      "id": "intro-f",
+      "source": "intro",
+      "target": "topic-f",
+      "label": "spawns",
+      "body": "Topic F is a front-stage offshoot of the mainstage."
+    },
+    {
+      "id": "intro-g",
+      "source": "intro",
+      "target": "topic-g",
+      "label": "elevates",
+      "body": "Topic G sits above the mainstage, extending its themes upward."
+    },
+    {
+      "id": "intro-h",
+      "source": "intro",
+      "target": "topic-h",
+      "label": "elevates",
+      "body": "Topic H sits above the mainstage on the opposite side."
+    },
+    {
+      "id": "a-c",
+      "source": "topic-a",
+      "target": "topic-c",
+      "label": "depends on",
+      "body": "Topic A depends on ideas first developed in Topic C."
+    },
+    {
+      "id": "b-d",
+      "source": "topic-b",
+      "target": "topic-d",
+      "label": "extends",
+      "body": "Topic B extends the framework introduced in Topic D."
+    },
+    {
+      "id": "a-g",
+      "source": "topic-a",
+      "target": "topic-g",
+      "label": "branches into",
+      "body": "Topic A branches upward into Topic G."
+    },
+    {
+      "id": "b-h",
+      "source": "topic-b",
+      "target": "topic-h",
+      "label": "branches into",
+      "body": "Topic B branches upward into Topic H."
+    },
+    {
+      "id": "e-c",
+      "source": "topic-e",
+      "target": "topic-c",
+      "label": "feeds",
+      "body": "Topic E feeds back into Topic C."
+    },
+    {
+      "id": "f-d",
+      "source": "topic-f",
+      "target": "topic-d",
+      "label": "feeds",
+      "body": "Topic F feeds back into Topic D."
+    },
+    {
+      "id": "g-h",
+      "source": "topic-g",
+      "target": "topic-h",
+      "label": "bridges",
+      "body": "Topic G and Topic H bridge the upper layer of the graph."
+    },
+    {
+      "id": "e-f",
+      "source": "topic-e",
+      "target": "topic-f",
+      "label": "bridges",
+      "body": "Topic E and Topic F bridge the front of the stage."
+    }
+  ]
+}
