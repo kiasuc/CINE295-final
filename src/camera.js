@@ -2,7 +2,14 @@ import * as THREE from "three";
 
 let active = null;
 
-export function focusOn({ target, distance, camera, controls, duration = 700 }) {
+export function focusOn({
+  target,
+  distance,
+  camera,
+  controls,
+  duration = 700,
+  compositionOffset = new THREE.Vector3(),
+}) {
   const fromTarget = controls.target.clone();
   const fromPos = camera.position.clone();
 
@@ -10,7 +17,7 @@ export function focusOn({ target, distance, camera, controls, duration = 700 }) 
   if (dir.lengthSq() < 1e-6) dir.set(0, 0, 1);
   dir.normalize();
 
-  const toTarget = target.clone();
+  const toTarget = target.clone().add(compositionOffset);
   const toPos = toTarget.clone().add(dir.multiplyScalar(distance));
 
   active = {

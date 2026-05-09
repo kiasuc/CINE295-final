@@ -45,7 +45,7 @@ export function createScene(container) {
   back.position.set(0, 10, -20);
   scene.add(back);
 
-  const stageGlow = new THREE.PointLight(0xff2d95, 1.2, 50, 1.6);
+  const stageGlow = new THREE.PointLight(0xff2d95, 1.78, 68, 1.25);
   stageGlow.position.set(0, -3, -18);
   scene.add(stageGlow);
 
@@ -65,9 +65,9 @@ export function createScene(container) {
 
   const bloomPass = new UnrealBloomPass(
     new THREE.Vector2(container.clientWidth, container.clientHeight),
-    0.55,
-    0.45,
-    0.6,
+    0.62,
+    0.52,
+    0.62,
   );
   composer.addPass(bloomPass);
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spheres</title>
+    <title>Music Industry Map</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +17,46 @@
       <div id="canvas-root"></div>
       <div id="vignette" aria-hidden="true"></div>
 
+      <section id="intro-overlay" aria-labelledby="intro-title">
+        <div class="intro-content">
+          <div class="intro-kicker">Class Project</div>
+          <h1 id="intro-title">Music Industry Map</h1>
+          <p>
+            An artist's career is built by an ecosystem of creative, legal,
+            financial, live, and distribution professionals. Click through the
+            map to see who enters each decision and why that relationship
+            matters.
+          </p>
+          <div id="intro-counts" class="intro-counts" aria-live="polite"></div>
+          <button id="intro-start" type="button">Start Exploring</button>
+        </div>
+      </section>
+
       <header id="brand" aria-hidden="true">
         <span class="brand-mark"></span>
         <span class="brand-text">MUSIC INDUSTRY MAP</span>
       </header>
+
+      <button id="catalog-open" type="button">View Full Map List</button>
+
+      <section id="catalog-overlay" class="hidden" aria-labelledby="catalog-title" aria-hidden="true">
+        <div class="catalog-content">
+          <button id="catalog-close" type="button" aria-label="Close full map list">&times;</button>
+          <div class="intro-kicker">Map Index</div>
+          <h1 id="catalog-title">Every Role and Relationship</h1>
+          <p id="catalog-summary"></p>
+          <div class="catalog-columns">
+            <section>
+              <h2>Roles</h2>
+              <div id="catalog-nodes" class="catalog-list"></div>
+            </section>
+            <section>
+              <h2>Relationships</h2>
+              <div id="catalog-relationships" class="catalog-list"></div>
+            </section>
+          </div>
+        </div>
+      </section>
 
       <aside id="info-panel" class="hidden" aria-hidden="true">
         <div class="panel-accent" aria-hidden="true"></div>
@@ -29,11 +65,10 @@
         <h1 id="panel-title"></h1>
         <div id="panel-meta"></div>
         <div id="panel-body"></div>
-        <div id="panel-links"></div>
       </aside>
 
       <div id="hint">
-        DRAG TO ORBIT &nbsp;·&nbsp; SCROLL TO ZOOM &nbsp;·&nbsp; CLICK A SPHERE OR LINK
+        DRAG TO ORBIT &nbsp;&middot;&nbsp; SCROLL TO ZOOM &nbsp;&middot;&nbsp; CLICK A ROLE OR RELATIONSHIP
       </div>
     </div>
 

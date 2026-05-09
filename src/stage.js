@@ -2,6 +2,13 @@ import * as THREE from "three";
 
 const UP = new THREE.Vector3(0, 1, 0);
 
+function makeBloomColor(colorValue, intensity = 1.55) {
+  const glow = new THREE.Color(colorValue);
+  const maxChannel = Math.max(glow.r, glow.g, glow.b);
+  if (maxChannel > 0) glow.multiplyScalar(intensity / maxChannel);
+  return glow;
+}
+
 export function createStage(scene) {
   const root = new THREE.Group();
   root.name = "stage";
@@ -32,8 +39,8 @@ export function createStage(scene) {
       h.body.rotation.z = h.baseTilt + swayZ;
       h.body.rotation.x = h.basePan + swayX;
       const pulse = 0.5 + 0.5 * Math.sin(time * 0.28 + h.phase * 1.7);
-      h.beam.material.opacity = h.beamBaseOpacity + pulse * 0.10;
-      h.beamHalo.material.opacity = h.haloBaseOpacity + pulse * 0.04;
+      h.beam.material.opacity = h.beamBaseOpacity + pulse * 0.18;
+      h.beamHalo.material.opacity = h.haloBaseOpacity + pulse * 0.1;
     }
   });
 
@@ -255,9 +262,10 @@ function buildMovingHeads(root) {
     const lens = new THREE.Mesh(
       new THREE.CircleGeometry(0.32, 22),
       new THREE.MeshBasicMaterial({
-        color: s.color,
+        color: makeBloomColor(s.color, 1.45),
         transparent: true,
         opacity: 0.95,
+        toneMapped: false,
       }),
     );
     lens.position.y = -0.48;
@@ -267,11 +275,12 @@ function buildMovingHeads(root) {
     const lensHalo = new THREE.Mesh(
       new THREE.SphereGeometry(0.55, 16, 12),
       new THREE.MeshBasicMaterial({
-        color: s.color,
+        color: makeBloomColor(s.color, 1.8),
         transparent: true,
-        opacity: 0.32,
+        opacity: 0.58,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
+        toneMapped: false,
       }),
     );
     lensHalo.position.y = -0.45;
@@ -281,12 +290,13 @@ function buildMovingHeads(root) {
     const beam = new THREE.Mesh(
       new THREE.CylinderGeometry(0.05, 0.13, beamLength, 18, 1, true),
       new THREE.MeshBasicMaterial({
-        color: s.color,
+        color: makeBloomColor(s.color, 1.7),
         transparent: true,
-        opacity: 0.45,
+        opacity: 0.7,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         side: THREE.DoubleSide,
+        toneMapped: false,
       }),
     );
     beam.position.y = -beamLength / 2 - 0.5;
@@ -295,12 +305,13 @@ function buildMovingHeads(root) {
     const beamHalo = new THREE.Mesh(
       new THREE.CylinderGeometry(0.18, 0.34, beamLength, 14, 1, true),
       new THREE.MeshBasicMaterial({
-        color: s.color,
+        color: makeBloomColor(s.color, 1.85),
         transparent: true,
-        opacity: 0.10,
+        opacity: 0.28,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         side: THREE.DoubleSide,
+        toneMapped: false,
       }),
     );
     beamHalo.position.y = -beamLength / 2 - 0.5;
@@ -319,8 +330,8 @@ function buildMovingHeads(root) {
       baseTilt: s.tilt,
       basePan: s.pan,
       phase: i * 0.85,
-      beamBaseOpacity: 0.4,
-      haloBaseOpacity: 0.10,
+      beamBaseOpacity: 0.58,
+      haloBaseOpacity: 0.26,
     });
   }
   return heads;
@@ -405,7 +416,7 @@ function buildSideLeds(root) {
   const glowMat = new THREE.MeshBasicMaterial({
     map: tex,
     transparent: true,
-    opacity: 0.55,
+    opacity: 0.94,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     toneMapped: false,
@@ -794,4 +805,3 @@ function makeSideLedTexture() {
   tex.colorSpace = THREE.SRGBColorSpace;
   return tex;
 }
-

@@ -6,7 +6,13 @@
       "position": [0, 2, 0],
       "radius": 1.45,
       "color": "#00f0ff",
-      "body": "The central creative figure whose recordings, live performances, brand, and career decisions connect the rest of the music-industry team."
+      "body": "The artist is the central creative business whose songs, performances, image, and choices give the whole team a direction.",
+      "details": {
+        "whatTheyDo": "Creates and performs the work, approves major opportunities, and makes the career choices the team supports.",
+        "whyArtistNeedsThem": "Every deal, campaign, tour, and release exists to grow the artist's audience and income.",
+        "whenTheyGetInvolved": "The artist is involved from the first creative idea through release, promotion, touring, and long-term brand decisions.",
+        "exampleDecision": "Deciding whether to release a single independently, sign with a label, or hold the song for a larger rollout."
+      }
     },
     {
       "id": "artist-manager",
@@ -14,7 +20,13 @@
       "position": [7, 8, 5],
       "radius": 1.05,
       "color": "#ff2d95",
-      "body": "The central strategist who coordinates business deals, career strategy, and the artist's professional team."
+      "body": "The artist manager is the day-to-day strategist who turns creative goals into business priorities and keeps the team aligned.",
+      "details": {
+        "whatTheyDo": "Coordinates the professional team, filters opportunities, manages timelines, and helps set the artist's long-term strategy.",
+        "whyArtistNeedsThem": "A manager protects the artist from scattered decisions and makes sure business moves support the bigger career plan.",
+        "whenTheyGetInvolved": "They usually become central once an artist has momentum, offers, releases, or touring activity that needs coordination.",
+        "exampleDecision": "Choosing whether a brand offer fits the artist's image or distracts from the next release."
+      }
     },
     {
       "id": "songwriter-composer",
@@ -22,7 +34,13 @@
       "position": [-8, 8, 6],
       "radius": 0.95,
       "color": "#b026ff",
-      "body": "The creators of the underlying musical composition, including melodies, lyrics, and harmonic structures."
+      "body": "Songwriters and composers create the lyrics, melodies, and musical ideas that become the copyright behind a song.",
+      "details": {
+        "whatTheyDo": "Write or co-write the composition and help shape the emotional and musical identity of the record.",
+        "whyArtistNeedsThem": "Strong songs create long-term value through publishing income, covers, sync placements, and repeat listening.",
+        "whenTheyGetInvolved": "They are involved before or during recording, especially in writing sessions, toplining, and arrangement development.",
+        "exampleDecision": "Splitting writing credit fairly after several collaborators contribute hooks, lyrics, and melodies."
+      }
     },
     {
       "id": "music-producer",
@@ -30,7 +48,13 @@
       "position": [-12, 3, -4],
       "radius": 0.98,
       "color": "#4ed8ff",
-      "body": "The creative director of the recording process who oversees arrangement, performance, and sound design."
+      "body": "The music producer guides the sound of the recording and helps turn a song idea into a finished master.",
+      "details": {
+        "whatTheyDo": "Shapes arrangements, performances, sounds, session flow, and creative choices during the recording process.",
+        "whyArtistNeedsThem": "A producer can make the record feel commercially competitive while still matching the artist's identity.",
+        "whenTheyGetInvolved": "They enter during pre-production and recording, often before the engineer captures the final takes.",
+        "exampleDecision": "Choosing whether a track needs a live drummer, a programmed beat, or a simpler arrangement."
+      }
     },
     {
       "id": "audio-engineer",
@@ -38,7 +62,13 @@
       "position": [-14, 1, 5],
       "radius": 0.88,
       "color": "#6cffd0",
-      "body": "Technical specialists in recording, mixing, and mastering who capture and polish sound into a commercial master."
+      "body": "The audio engineer captures, mixes, and masters recordings so the final track sounds polished and release-ready.",
+      "details": {
+        "whatTheyDo": "Runs recording sessions, edits takes, balances the mix, and prepares masters that meet platform standards.",
+        "whyArtistNeedsThem": "Good engineering keeps a strong song from sounding unfinished, unclear, or uncompetitive next to other releases.",
+        "whenTheyGetInvolved": "They are involved during studio recording, mixing, mastering, and final delivery checks.",
+        "exampleDecision": "Deciding whether the vocal needs another take, more editing, or a different mix approach."
+      }
     },
     {
       "id": "entertainment-attorney",
@@ -46,7 +76,13 @@
       "position": [12, 3, -6],
       "radius": 0.92,
       "color": "#ff7a00",
-      "body": "Legal counsel specialized in negotiating contracts for labels, publishing, and touring while protecting intellectual property rights."
+      "body": "The entertainment attorney protects the artist's rights and negotiates the contracts behind deals, releases, and touring.",
+      "details": {
+        "whatTheyDo": "Reviews deal terms, negotiates contracts, explains legal risk, and protects ownership, royalties, and approvals.",
+        "whyArtistNeedsThem": "Music deals can affect income and control for years, so artists need someone focused on legal leverage.",
+        "whenTheyGetInvolved": "They should be involved before signing label, publishing, management, producer, licensing, or live performance agreements.",
+        "exampleDecision": "Negotiating whether a label deal gives the artist enough creative control and a fair royalty structure."
+      }
     },
     {
       "id": "business-manager",
@@ -54,7 +90,13 @@
       "position": [13, 1, 5],
       "radius": 0.9,
       "color": "#ffb24e",
-      "body": "A specialized accountant managing the artist's finances, including taxes, budgets, and long-term financial planning."
+      "body": "The business manager handles the artist's money, budgets, taxes, and financial planning as the career becomes more complex.",
+      "details": {
+        "whatTheyDo": "Tracks income and expenses, pays bills, manages taxes, reviews budgets, and helps plan sustainable growth.",
+        "whyArtistNeedsThem": "Artists can look successful publicly while losing money privately if touring, advances, and taxes are not managed.",
+        "whenTheyGetInvolved": "They become important when income grows, touring costs rise, or multiple royalty streams need tracking.",
+        "exampleDecision": "Checking whether a proposed tour is profitable after crew, travel, production, commissions, and taxes."
+      }
     },
     {
       "id": "music-publisher",
@@ -62,7 +104,13 @@
       "position": [-5, -3, 10],
       "radius": 0.9,
       "color": "#9bc94a",
-      "body": "Entities that manage, license, and monetize musical compositions, seek sync opportunities, and collect royalties."
+      "body": "The music publisher manages song rights, collects publishing income, and looks for licensing opportunities for compositions.",
+      "details": {
+        "whatTheyDo": "Registers songs, collects publishing royalties, pitches music for sync, and helps manage composition rights.",
+        "whyArtistNeedsThem": "Publishing can create income long after release through radio, streaming, covers, samples, and film or TV placements.",
+        "whenTheyGetInvolved": "They enter once songs are written, released, licensed, or valuable enough to administer professionally.",
+        "exampleDecision": "Deciding whether to approve a TV placement based on fee, exposure, and fit with the artist's image."
+      }
     },
     {
       "id": "a-r-executive",
@@ -70,7 +118,13 @@
       "position": [4, 12, -9],
       "radius": 0.9,
       "color": "#ff7ab8",
-      "body": "Label representatives responsible for talent scouting and guiding the creative development of signed artists."
+      "body": "The A&R executive connects artists with label resources and helps guide creative development inside the record company.",
+      "details": {
+        "whatTheyDo": "Finds talent, supports song selection, connects artists with producers, and advocates for projects inside the label.",
+        "whyArtistNeedsThem": "A strong A&R partner can help an artist get attention, resources, and creative support from the label.",
+        "whenTheyGetInvolved": "They are involved during signing discussions, recording, release planning, and label decision-making.",
+        "exampleDecision": "Choosing which single to push first based on the artist's sound, audience, and label priorities."
+      }
     },
     {
       "id": "marketing-pr-representative",
@@ -78,7 +132,13 @@
       "position": [12, 8, 9],
       "radius": 0.92,
       "color": "#c6ff00",
-      "body": "Professionals managing the artist's public image, media relationships, and overall release campaigns."
+      "body": "Marketing and PR representatives shape public attention around the artist, the story, and each release.",
+      "details": {
+        "whatTheyDo": "Plans campaigns, pitches media, coordinates social strategy, manages press moments, and supports audience growth.",
+        "whyArtistNeedsThem": "Even strong music can get lost without a clear story, release plan, and way to reach listeners.",
+        "whenTheyGetInvolved": "They enter before a release, tour, announcement, or public moment that needs coordinated attention.",
+        "exampleDecision": "Choosing whether to lead a campaign with a music video, playlist pitch, press story, or social rollout."
+      }
     },
     {
       "id": "booking-agent",
@@ -86,7 +146,13 @@
       "position": [-4, -1, -13],
       "radius": 0.9,
       "color": "#ff4d6d",
-      "body": "The representative who secures live performance offers, negotiates fees, and routes tours."
+      "body": "The booking agent secures live opportunities, negotiates performance fees, and helps turn audience demand into shows.",
+      "details": {
+        "whatTheyDo": "Books concerts, festivals, and appearances while negotiating fees, routing, holds, and live deal terms.",
+        "whyArtistNeedsThem": "Live shows build fan relationships and income, but poor routing or weak deals can waste time and money.",
+        "whenTheyGetInvolved": "They become important once an artist can sell tickets, support bigger acts, or attract festival interest.",
+        "exampleDecision": "Deciding whether to accept a lower-paying support slot because it reaches the right audience."
+      }
     },
     {
       "id": "concert-promoter",
@@ -94,7 +160,13 @@
       "position": [5, -4, -12],
       "radius": 0.88,
       "color": "#ff9f1c",
-      "body": "The individual or company that takes the financial risk to produce a live event by renting the venue and marketing the show."
+      "body": "The concert promoter presents the live event, sells tickets, markets the show, and takes on much of the local financial risk.",
+      "details": {
+        "whatTheyDo": "Rents or works with venues, markets the show, manages ticket sales, and settles the event finances.",
+        "whyArtistNeedsThem": "Promoters connect artists to local audiences and determine whether a show is financially realistic in a market.",
+        "whenTheyGetInvolved": "They enter when a booking agent is placing dates or negotiating individual concert offers.",
+        "exampleDecision": "Setting ticket price and venue size based on expected demand, artist fee, and marketing budget."
+      }
     },
     {
       "id": "tour-production-manager",
@@ -102,7 +174,13 @@
       "position": [-10, -3, -9],
       "radius": 0.92,
       "color": "#00bbf9",
-      "body": "Logistical leaders who oversee road operations, travel, budgeting, and the technical execution of tours."
+      "body": "The tour and production manager turns a live plan into a workable road operation with budgets, schedules, crew, and equipment.",
+      "details": {
+        "whatTheyDo": "Coordinates travel, schedules, production needs, crew communication, technical riders, and day-to-day tour logistics.",
+        "whyArtistNeedsThem": "A tour can fail financially or operationally if timing, staffing, equipment, and budgets are not controlled.",
+        "whenTheyGetInvolved": "They enter once live dates are being planned and become central as rehearsals and the tour approach.",
+        "exampleDecision": "Choosing whether a larger lighting package is worth the cost for the venues on the route."
+      }
     },
     {
       "id": "live-technical-crew",
@@ -110,7 +188,13 @@
       "position": [-15, 2, -10],
       "radius": 0.86,
       "color": "#80ffdb",
-      "body": "Technical experts including FOH engineers, monitor engineers, and backline techs who maintain equipment and run the show nightly."
+      "body": "The live technical crew makes the show work on stage by handling sound, monitors, instruments, lighting, and gear.",
+      "details": {
+        "whatTheyDo": "Sets up equipment, runs front-of-house and monitor sound, maintains backline, and supports the performance each night.",
+        "whyArtistNeedsThem": "The audience judges the live experience, and the crew helps make the artist sound and look professional.",
+        "whenTheyGetInvolved": "They enter during rehearsals, load-in, soundcheck, the performance, and post-show breakdown.",
+        "exampleDecision": "Solving a monitor problem before doors open so the artist can hear clearly on stage."
+      }
     },
     {
       "id": "digital-distributor-platform-gatekeeper",
@@ -118,7 +202,13 @@
       "position": [5, -3, 12],
       "radius": 0.88,
       "color": "#fee440",
-      "body": "Intermediaries that deliver music to streaming platforms, plus DSP curators who influence discovery and placement."
+      "body": "Digital distributors deliver releases to streaming platforms, while platform gatekeepers can influence discovery and playlist reach.",
+      "details": {
+        "whatTheyDo": "Sends music and metadata to platforms, manages delivery requirements, and supports pitches for platform visibility.",
+        "whyArtistNeedsThem": "Listeners cannot find a release if the music, credits, artwork, and timing are not delivered correctly.",
+        "whenTheyGetInvolved": "They enter before release day when metadata, artwork, audio files, and pitch timelines must be finalized.",
+        "exampleDecision": "Choosing a release date that gives enough time for playlist pitching and clean platform delivery."
+      }
     }
   ],
   "edges": [
