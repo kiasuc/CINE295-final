@@ -12,7 +12,7 @@ An interactive 3D visualization of the music industry ecosystem — 15 professio
 
 The music industry is hard to break into partly because its structure is invisible. This project makes that structure navigable: each sphere is a role, each line is a working relationship. Click any node or edge to learn what that role does, when they enter an artist's career, and who they collaborate with.
 
-Built as a final project for CINE 295 at USC, informed by interviews with working artist managers, a behind-the-scenes tour of CORE Los Angeles (Insomniac × Tomorrowland), and backstage access at Beyond Wonderland SoCal and Shabang.
+Built as a final project for CINE 295, Duke in LA Spring 2026 taught by Katheen Dowdey, informed by interviews with working artist managers, a behind-the-scenes tour of CORE Los Angeles (Insomniac × Tomorrowland), and backstage access at Beyond Wonderland SoCal and Shabang.
 
 ## Controls
 
