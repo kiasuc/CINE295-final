@@ -36,6 +36,28 @@ const relationshipsById = createRelationshipLookup(data, nodesById);
 const particles = createParticleField(scene, { count: 250, radius: 45 });
 
 initPanel({ onJumpToNode: jumpToNode, onJumpToEdge: jumpToEdge, onClose: resetView });
+
+// Influences overlay
+const influencesOverlay = document.getElementById("influences-overlay");
+const influencesClose = document.getElementById("influences-close");
+const influencesOpen = document.getElementById("influences-open");
+const introInfluences = document.getElementById("intro-influences");
+
+function openInfluences() {
+  influencesOverlay.classList.remove("hidden");
+  influencesOverlay.removeAttribute("aria-hidden");
+}
+function closeInfluences() {
+  influencesOverlay.classList.add("hidden");
+  influencesOverlay.setAttribute("aria-hidden", "true");
+}
+
+influencesOpen.addEventListener("click", openInfluences);
+introInfluences.addEventListener("click", openInfluences);
+influencesClose.addEventListener("click", closeInfluences);
+influencesOverlay.addEventListener("click", (e) => {
+  if (e.target === influencesOverlay) closeInfluences();
+});
 initIntroOverlay();
 initCatalogOverlay();
 

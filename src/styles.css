@@ -142,6 +142,12 @@ body {
   text-transform: none;
 }
 
+.intro-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 #intro-start {
   border: 1px solid rgba(0, 240, 255, 0.55);
   border-radius: 8px;
@@ -165,6 +171,146 @@ body {
   box-shadow: 0 0 16px rgba(255, 45, 149, 0.22);
   outline: none;
   transform: translateY(-1px);
+}
+
+#intro-influences {
+  border: 1px solid rgba(176, 38, 255, 0.45);
+  border-radius: 8px;
+  background: rgba(176, 38, 255, 0.08);
+  color: #f3fbff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 13px 18px;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
+}
+
+#intro-influences:hover,
+#intro-influences:focus-visible {
+  background: rgba(176, 38, 255, 0.18);
+  border-color: rgba(176, 38, 255, 0.8);
+  box-shadow: 0 0 16px rgba(176, 38, 255, 0.28);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+#influences-open {
+  position: fixed;
+  top: 96px;
+  left: 22px;
+  z-index: 5;
+  border: 1px solid rgba(176, 38, 255, 0.28);
+  border-radius: 8px;
+  background: rgba(8, 10, 18, 0.58);
+  color: rgba(240, 243, 255, 0.9);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 10px 13px;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px) saturate(1.1);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  transition: background 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
+}
+
+#influences-open:hover,
+#influences-open:focus-visible {
+  background: rgba(176, 38, 255, 0.12);
+  border-color: rgba(176, 38, 255, 0.65);
+  box-shadow: 0 0 14px rgba(176, 38, 255, 0.18);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+#influences-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 22;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: rgba(5, 6, 10, 0.78);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  opacity: 1;
+  transition: opacity 240ms ease, visibility 240ms ease;
+}
+
+#influences-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.influences-content {
+  position: relative;
+  width: min(780px, 100%);
+  max-height: min(820px, calc(100vh - 56px));
+  overflow-y: auto;
+  border: 1px solid rgba(176, 38, 255, 0.28);
+  border-radius: 8px;
+  background: rgba(8, 10, 18, 0.84);
+  padding: 38px 44px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 28px 100px rgba(0, 0, 0, 0.62),
+    0 0 54px rgba(176, 38, 255, 0.14);
+}
+
+#influences-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+#influences-close:hover,
+#influences-close:focus-visible {
+  background: rgba(176, 38, 255, 0.1);
+  border-color: rgba(176, 38, 255, 0.5);
+  outline: none;
+}
+
+#influences-title {
+  margin: 0 44px 28px 0;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.influences-body h2 {
+  margin: 32px 0 10px;
+  color: var(--violet);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.influences-body h2:first-child {
+  margin-top: 0;
+}
+
+.influences-body p {
+  margin: 0 0 16px;
+  color: rgba(240, 243, 255, 0.84);
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 #brand {

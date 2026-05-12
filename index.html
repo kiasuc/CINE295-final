@@ -28,7 +28,10 @@
             matters.
           </p>
           <div id="intro-counts" class="intro-counts" aria-live="polite"></div>
-          <button id="intro-start" type="button">Start Exploring</button>
+          <div class="intro-buttons">
+            <button id="intro-start" type="button">Start Exploring</button>
+            <button id="intro-influences" type="button">View Influences</button>
+          </div>
         </div>
       </section>
 
@@ -38,6 +41,7 @@
       </header>
 
       <button id="catalog-open" type="button">View Full Map List</button>
+      <button id="influences-open" type="button">Creative Influences</button>
 
       <section id="catalog-overlay" class="hidden" aria-labelledby="catalog-title" aria-hidden="true">
         <div class="catalog-content">
@@ -66,6 +70,32 @@
         <div id="panel-meta"></div>
         <div id="panel-body"></div>
       </aside>
+
+      <section id="influences-overlay" class="hidden" aria-labelledby="influences-title" aria-hidden="true">
+        <div class="influences-content">
+          <button id="influences-close" type="button" aria-label="Close influences">&times;</button>
+          <div class="intro-kicker">CINE 295 Final Project</div>
+          <h1 id="influences-title">Creative Influences</h1>
+
+          <div class="influences-body">
+            <h2>Introduction</h2>
+            <p>This project grew out of direct involvement in the music industry, as a student, an intern, and someone who had access to working professionals and live events. One of the clearest things that experience revealed was how opaque the music business feels from the outside: there are dozens of roles that shape an artist's career, but few resources that show how they connect. The Music Industry Map is an attempt to make that ecosystem legible. The influences described here — feedback, interviews, panels, and festival access — are what gave the project its shape and grounded it in reality rather than theory.</p>
+
+            <h2>Draft Feedback</h2>
+            <p>Kathleen reviewed the project concept and affirmed its direction. Her feedback was that it was a genuinely useful idea, particularly for people who are at the beginning of their music industry journey and don't yet know what roles exist or how they relate to one another. That response sharpened the project's focus: rather than building something for industry insiders, the map is oriented toward newcomers. It prioritizes clarity about what each role does, when they enter an artist's career, and who they work with — the information that would have been most valuable at the start of the semester.</p>
+
+            <h2>Industry Interviews — Artist Managers</h2>
+            <p>Three working artist managers were interviewed over the course of the project: Kamran Khan (Laszewo, Distant Matter), Jake Horvitz (DJ Mandy), and Ryan MacAvoy (Twin Diplomacy, Koastle, Conrad.). Each brought a different roster and a different vantage point on how the music industry actually functions day to day.</p>
+            <p>Across all three conversations, a few themes emerged consistently. The manager's role is fundamentally coordinative — they are the person who holds all the other relationships together and ensures that the creative work can actually reach the world. Knowing when to bring in other professionals (particularly an entertainment attorney and a business manager) is one of the most consequential decisions early in an artist's career; all three managers emphasized that artists often delay these relationships too long. The interface between management and the label — specifically the A&amp;R relationship — is where much of the day-to-day strategic work happens. These conversations directly informed how the project describes the manager node and its connections to adjacent roles.</p>
+
+            <h2>Panels &amp; Events</h2>
+            <p>I was given the opportunity to attend a behind-the-scenes tour of CORE Los Angeles by Insomniac × Tomorrowland via the USC EDM Club. This tour offered direct access to one of the premier electronic music production companies in the country. Seeing CORE LA — Tomorrowland CORE's first activation in Los Angeles in collaboration with Insomniac — made the production and logistics side of the music industry concrete in a way that reading about it cannot. The visit illustrated how much infrastructure underlies a major live event: the coordination between production managers, technical crews, and venue staff is constant, layered, and highly specialized. This experience directly shaped how the project describes the Tour &amp; Production Manager and Live Technical Crew nodes, both of which are easy to underestimate from the outside.</p>
+
+            <h2>Festival Experiences — Behind the Scenes</h2>
+            <p>Beyond Wonderland SoCal and Shabang. Backstage and operational access at both festivals provided a ground-level view of how a live event actually runs. Watching the roles described in the project — booking agents, concert promoters, technical crew, tour managers — operate in real time made their interdependencies visible in a way that's difficult to convey abstractly. The booking agent's work is finished before the festival begins; the promoter carries the financial risk up to the day of the show; the technical crew's work starts early and ends late. These observations informed the edge descriptions in the project — the relationship nodes that explain not just who connects to whom, but what that connection looks like in practice.</p>
+          </div>
+        </div>
+      </section>
 
       <div id="hint">
         DRAG TO ORBIT &nbsp;&middot;&nbsp; SCROLL TO ZOOM &nbsp;&middot;&nbsp; CLICK A ROLE OR RELATIONSHIP
